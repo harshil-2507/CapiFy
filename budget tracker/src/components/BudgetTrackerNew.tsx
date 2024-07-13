@@ -24,9 +24,6 @@ const BudgetTracker: React.FC = () => {
       return acc;
     }, {} as { [key: string]: number });
     setIdealPlan(newIdealPlan);
-
-    // Display budget set confirmation
-    // alert('Budget set successfully!');
   };
 
   const handleExpenseSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -59,6 +56,10 @@ const BudgetTracker: React.FC = () => {
       ? 'Great! You are still under your budget, good work! 🎉'
       : 'Oh no! You have exceeded your budget, try to save more! 💸';
     setExpenseMessage(message);
+  };
+
+  const handleCloseAlert = () => {
+    setExpenseMessage('');
   };
 
   useEffect(() => {
@@ -140,7 +141,12 @@ const BudgetTracker: React.FC = () => {
                 />
                 <button type="submit">Add Expense</button>
               </form>
-              {expenseMessage && <p>{expenseMessage}</p>}
+              {expenseMessage && (
+                <div id="budget-alert" className="alert show">
+                  <span>{expenseMessage}</span>
+                  <button className="close-btn" onClick={handleCloseAlert}>×</button>
+                </div>
+              )}
             </section>
 
             <AddCategory onCategoryAdd={handleAddCategory} />

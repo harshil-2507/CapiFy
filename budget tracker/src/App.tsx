@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
-import BudgetTracker from './components/BudgetTracker';
+import BudgetTrackerNew from './components/BudgetTrackerNew';
 
 const App: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const App: React.FC = () => {
         <h1>Budget App</h1>
       </header>
       <main>
-        <BudgetTracker />
+        <BudgetTrackerNew />
       </main>
     </div>
   );
