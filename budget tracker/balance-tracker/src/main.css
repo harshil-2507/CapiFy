@@ -1,0 +1,93 @@
+/* main.css */
+.container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f7e7c6, #c8a07b); /* Gradient from gold to a darker shade */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.add-gain {
+  background-color: #28a745; /* Green for gain */
+}
+
+button.add-gain:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+button.add-spend {
+  background-color: #dc3545; /* Red for spend */
+}
+
+button.add-spend:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+button.logout {
+  background-color: #007bff; /* Blue for logout */
+}
+
+button.logout:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.transaction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff; /* Background color for transaction items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}

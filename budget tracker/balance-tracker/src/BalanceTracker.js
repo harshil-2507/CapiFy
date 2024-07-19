@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './main.css';
 
 function BalanceTracker({ currentUser, setCurrentUser }) {
   const [balance, setBalance] = useState(0);
@@ -8,6 +9,7 @@ function BalanceTracker({ currentUser, setCurrentUser }) {
   useEffect(() => {
     const storedBalance = localStorage.getItem(`${currentUser.username}_balance`);
     const storedTransactions = JSON.parse(localStorage.getItem(`${currentUser.username}_transactions`)) || [];
+    
     if (storedBalance) {
       setBalance(parseFloat(storedBalance));
     }
@@ -17,6 +19,7 @@ function BalanceTracker({ currentUser, setCurrentUser }) {
   const handleTransaction = (type) => {
     const newBalance = type === 'gain' ? balance + parseFloat(amount) : balance - parseFloat(amount);
     setBalance(newBalance);
+    
     const newTransaction = { type, amount: parseFloat(amount), date: new Date().toLocaleString() };
     const newTransactions = [...transactions, newTransaction];
     setTransactions(newTransactions);
@@ -32,16 +35,18 @@ function BalanceTracker({ currentUser, setCurrentUser }) {
   };
 
   return (
-    <div>
-      <h2>Welcome, {currentUser.username}</h2>
-      <h3>Current Balance: ${balance.toFixed(2)}</h3>
+    <div className="container">
+      <div className="header">
+        <h2>Welcome, {currentUser.username}</h2>
+        <h3 className="balance">Current Balance: ${balance.toFixed(2)}</h3>
+      </div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           handleTransaction('gain');
         }}
       >
-        <div>
+        <div className="form-group">
           <label>Amount:</label>
           <input
             type="number"
@@ -50,26 +55,27 @@ function BalanceTracker({ currentUser, setCurrentUser }) {
             required
           />
         </div>
-        <button type="submit">Add Gain</button>
+        <button type="submit" className="add-gain">Add Gain</button>
         <button
           type="button"
           onClick={(e) => {
             e.preventDefault();
             handleTransaction('spend');
           }}
+          className="add-spend"
         >
           Add Spend
         </button>
       </form>
       <h3>Transaction History:</h3>
-      <ul>
+      <ul className="transaction-list">
         {transactions.map((transaction, index) => (
           <li key={index}>
             {transaction.date} - {transaction.type} of ${transaction.amount.toFixed(2)}
           </li>
         ))}
       </ul>
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout} className="logout">Logout</button>
     </div>
   );
 }
