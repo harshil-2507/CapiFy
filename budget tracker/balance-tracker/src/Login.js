@@ -7,37 +7,39 @@ function Login({ setCurrentUser }) {
   const handleLogin = (e) => {
     e.preventDefault();
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    const user = users.find((user) => user.username === username && user.password === password);
+    const user = users.find(user => user.username === username && user.password === password);
     if (user) {
       localStorage.setItem('currentUser', JSON.stringify(user));
       setCurrentUser(user);
     } else {
-      alert('Invalid credentials');
+      alert('Invalid username or password');
     }
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin} className="auth-form">
       <h2>Login</h2>
-      <div>
-        <label>Username:</label>
+      <div className="form-group">
+        <label htmlFor="username">Username:</label>
         <input
           type="text"
+          id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
       </div>
-      <div>
-        <label>Password:</label>
+      <div className="form-group">
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
+          id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </div>
-      <button type="submit">Login</button>
+      <button type="submit" className="button login">Login</button>
     </form>
   );
 }
