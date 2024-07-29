@@ -11,13 +11,14 @@ const App: React.FC = () => {
             <a href="index.html"><img src="logo CapiFy.com\logo\dark theme\CapiFy-logo.png"/></a>
         </div>
         <ul className="nav-links">
-            <li><a href="market/index.html">Markets</a></li>
-            <li><a href="#">Economics</a></li>
-            <li><a href="#">Industries</a></li>
-            <li><a href="#">Tech</a></li>
-            <li><a href="#">Businessweek</a></li>
-            <li><a href="#">Opinion</a></li>
-            <li><a href="#">More</a></li>
+            <li><a href="/market/index.html">Markets</a></li>
+            <li><a href="#">Budget Tracker</a></li>
+            <li><a href="#">Balance Tracker</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Financial health quiz</a></li>
+            <li><a href="#">More about us</a></li>
         </ul>
         <div className="nav-actions">
             <button className="sign-in">Sign In</button>

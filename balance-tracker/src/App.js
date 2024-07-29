@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import SignUp from './SignUp';
 import Login from './Login';
 import BalanceTracker from './BalanceTracker';
@@ -41,5 +42,12 @@ function App() {
     </div>
   );
 }
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 export default App;
