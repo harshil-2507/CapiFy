@@ -64,3 +64,6 @@ setTimeout(()=>{
 // change the colour theme and like photo taken on mobile of dribble dark gradient 6th picture 
 // page containing first PALLATE on one side 1)Amplify your Financial journey with capify text pallate in which CAPIFY is written in gradient colour and other text is in white  with gradient colour effect around the template
 // second pallate on other side 2) breif intro (written in whatsapp me chat)of capify in card like pallate an gradient colour effect around it
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});

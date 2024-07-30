@@ -416,3 +416,50 @@ header {
 .parallax p {
     font-size: 1.2em;
 }
+.about-us-capify {
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.about-us-capify-text {
+    font-size: 1.2em;
+    color: #f8f3f3;
+    position: relative;
+    z-index: 90;
+    text-align: center; /* Center text for smaller screens */
+}
+
+.about-us-capify-text h1 {
+    font-size: 1.8em; /* Adjust font size for h1 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-us-capify {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .about-us-capify-text {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+
+    .about-us-capify-text h1 {
+        font-size: 1.5em; /* Smaller font size for h1 on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-capify {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .about-us-capify-text {
+        font-size: 0.9em; /* Even smaller font size for smaller screens */
+    }
+
+    .about-us-capify-text h1 {
+        font-size: 1.2em; /* Smaller font size for h1 on very small screens */
+    }
+}
