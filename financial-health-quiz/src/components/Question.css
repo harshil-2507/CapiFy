@@ -1,15 +1,28 @@
 .question-container {
-    text-align: center;
-  }
-  
-  .question-button {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-  }
-  
+  text-align: center;
+}
+
+.question-button {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.question-input {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (max-width: 600px) {
+  .question-button,
   .question-input {
-    width: 100%;
-    max-width: 300px;
+    max-width: 90%;
   }
-  
+}
+
+@media (max-width: 400px) {
+  .question-button,
+  .question-input {
+    max-width: 100%;
+  }
+}
