@@ -24,6 +24,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <div class="theme-toggle-container">
+                        <button class="btn btn-secondary theme-toggle-btn" onclick="toggleTheme()">Theme</button>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -43,28 +48,28 @@
                         <div class="overlay">
                             <h2>Financial Terminologies You Must Know!</h2>
                             <p>The top 20 most frequently used terms in finance which you must know.</p>
-                            <div class="small-texts"><small>By: Deep Das</small></div>
+                            <div class="small-texts"><small>By: Vansh Patel</small></div>
                         </div>
                     </div>
                     <div class="blog-post" style="background-image: url('images/Designer%20(3).jpeg');" onclick="window.location.href='blog3.html'">
                         <div class="overlay">
-                            <h2>Investing in Stocks: A Beginner's Guide</h2>
+                            <h2>Banking Tips and Tricks</h2>
                             <p>Learn to know the rules and regulations, what to take care of, and many more basic things about Indian stock markets.</p>
-                            <div class="small-texts"><small>By: Deep Das</small></div>
+                            <div class="small-texts"><small>By: Harshil Andhariya</small></div>
                         </div>
                     </div>
                     <div class="blog-post" style="background-image: url('images/Designer%20(4).jpeg');" onclick="window.location.href='blog4.html'">
                         <div class="overlay">
                             <h2>The Basics of Investing in Stocks</h2>
                             <p>Learn about stocks and the share market, understand key stock market terms, and start investing wisely. Make informed decisions with this stock market guide.</p>
-                            <div class="small-texts"><small>By: Deep Das</small></div>
+                            <div class="small-texts"><small>By: Kavisha Vaja</small></div>
                         </div>
                     </div>
                     <div class="blog-post" style="background-image: url('images/Designer%20(5).jpeg');" onclick="window.location.href='blog5.html'">
                         <div class="overlay">
                             <h2>5 Rules to Improve Your Financial Health</h2>
                             <p>The most important principles which can make you financially healthy.</p>
-                            <div class="small-texts"><small>By: Deep Das</small></div>
+                            <div class="small-texts"><small>By: Team Capify</small></div>
                         </div>
                     </div>
                 </div>
@@ -89,7 +94,7 @@
                     <ul>
                         <li><a href="blog1.html">Study the Trends of Stock Market Charts</a></li>
                         <li><a href="blog2.html">Financial Terminologies You Must Know!</a></li>
-                        <li><a href="blog3.html">Investing in Stocks: A Beginner's Guide</a></li>
+                        <li><a href="blog3.html">Banking Tips and Tricks</a></li>
                         <li><a href="blog4.html">The Basics of Investing in Stocks</a></li>
                         <li><a href="blog5.html">5 Rules to Improve Your Financial Health</a></li>
                     </ul>
@@ -105,22 +110,32 @@
         </div>
 
         <!-- Interactive Features Section -->
-                <h3>Suggest a Topic</h3>
-                <form id="topicSuggestionForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="topic" placeholder="Enter your suggested topic">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                </form>
+        <h3>Suggest a Topic</h3>
+        <form id="topicSuggestionForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="topic" name="topic" placeholder="Enter your suggested topic">
+                <small id="topicError" class="error"></small>
             </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <p id="feedbackMessage" class="success"></p>
+        </form>
+        <div class="suggestions-list">
+            <h3>Previously Suggested Topics</h3>
+            <ul id="suggestionsList">
+                <!-- Suggested topics will be populated here -->
+            </ul>
+           
         </div>
-
-        <!-- Footer -->
-        <footer class="mt-4 text-center">
-            <p>&copy; 2024 Financial Blog. All rights reserved.</p>
-        </footer>
     </div>
 
+    <!-- Footer -->
+    <footer class="mt-4 text-center">
+        <p>&copy; 2024 Financial Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
